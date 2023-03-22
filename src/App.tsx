@@ -1,4 +1,4 @@
-import { Header, Navigation } from "./components"
+import { Header, Navigation, Search } from "./components"
 import Logo from "./components/Logo"
 
 function App() {
@@ -16,6 +16,9 @@ function App() {
         <div className="flex flex-col w-full py-12 bg-white rounded-tl-[32px]">
           <div className="flex w-full items-center px-8 py-3">
             <Header />
+          </div>
+          <div className="flex w-full items-center px-8 py-3">
+            <Search />
           </div>
         </div>
       </div>
