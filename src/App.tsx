@@ -1,11 +1,18 @@
+import { Navigation } from "./components"
+import Logo from "./components/Logo"
 
 function App() {
   return (
     <div className="wrapper">
-      <nav className="flex w-2/12 items-center justify-center bg-purple-600">
-        aaa
-      </nav>
-      <div className="flex w-10/12 bg-purple-600">
+      <div className="flex flex-col w-[175px] p-8 bg-purple-600">
+        <div className="mb-16">
+          <Logo />
+        </div>
+        <nav>
+          <Navigation />
+        </nav>
+      </div>
+      <div className="flex flex-1 bg-purple-600">
         <div className="flex w-full items-center justify-center bg-white rounded-tl-3xl">
           aaaa
         </div>
