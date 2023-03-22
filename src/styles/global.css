@@ -13,10 +13,10 @@
   @apply flex w-full min-h-screen items-stretch justify-center bg-violet-600;
 }
 
-.nav-links li{
- @apply flex w-full items-center mb-9;
+.nav-links a{
+ @apply flex w-full items-center mb-9 hover:text-neutral-300 transition-colors;
 }
 
-.nav-links li > span{
+.nav-links a > span{
   @apply ml-4;
 }
