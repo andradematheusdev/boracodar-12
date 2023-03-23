@@ -12,7 +12,7 @@ export const Search = () => {
           type="text"
           name="search"
           id="search-input"
-          className="flex-1 focus:outline-none px-3"
+          className="flex-1 focus:outline-none px-3 bg-transparent"
           placeholder="Busque por cards, assuntos ou responsáveis..."
         />
       </div>
