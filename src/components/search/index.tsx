@@ -6,7 +6,7 @@ export const Search = () => {
       <button className="flex items-center justify-center text-white bg-violet-600 rounded-lg w-36 text-sm gap-x-2 hover:bg-violet-700">
         <BsFilter size={22} /> Filtrar
       </button>
-      <div className="flex flex-1 items-center shadow-lg border border-neutral-200 rounded-lg overflow-hidden px-7">
+      <div className="flex flex-1 items-center shadow-lg shadow-slate-200 border border-neutral-200 rounded-lg overflow-hidden px-7">
         <BsSearch size={18} />
         <input
           type="text"
