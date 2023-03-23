@@ -13,7 +13,7 @@ function App() {
         </nav>
       </div>
       <div className="flex flex-1">
-        <div className="flex flex-col w-full py-12 bg-white rounded-tl-[32px] px-8">
+        <div className="flex flex-col w-full py-12 bg-slate-50 rounded-tl-[32px] px-8">
           <div className="flex w-full items-center py-3">
             <Header />
           </div>
