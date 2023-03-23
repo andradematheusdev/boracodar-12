@@ -6,7 +6,7 @@ export const Header = () => {
       <div className="flex flex-1 gap-x-2 items-center">
         <h1 className="text-4xl font-bold text-neutral-800">Meu Kanban</h1>
         <a href="#">
-          <BsPencilFill size={24} />
+          <BsPencilFill size={24} className="text-neutral-400" />
         </a>
       </div>
       <div>
