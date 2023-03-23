@@ -1,4 +1,3 @@
-import React from "react";
 import { BsFilter, BsSearch } from "react-icons/bs";
 
 export const Search = () => {

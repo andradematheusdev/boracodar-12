@@ -14,7 +14,7 @@
 }
 
 .nav-links a{
- @apply flex w-full items-center mb-9 hover:text-neutral-300 transition-colors;
+ @apply flex w-full items-center mb-9 hover:text-violet-200 transition-colors;
 }
 
 .nav-links a > span{
