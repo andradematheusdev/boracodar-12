@@ -18,9 +18,9 @@ export const Grid = () => {
           <Card />
         </div>
       </div>
-      <div className="flex flex-col gap-y-4">
+      <div>
         <span className="block text-xl font-bold mb-6">Feito</span>
-        <div className="flex flex-col  gap-y-4">
+        <div className="flex flex-col gap-y-4">
           <Card />
           <Card />
         </div>
