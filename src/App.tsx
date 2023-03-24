@@ -1,5 +1,5 @@
-import { Grid, Header, Navigation, Search } from "./components"
-import Logo from "./components/Logo"
+import { Grid, Header, Navigation, Search } from "./components";
+import Logo from "./components/Logo";
 
 function App() {
   return (
@@ -14,19 +14,13 @@ function App() {
       </div>
       <div className="flex flex-1">
         <div className="flex flex-col w-full py-12 bg-slate-50 rounded-tl-[32px] px-8">
-          <div className="flex w-full items-center py-3">
-            <Header />
-          </div>
-          <div className="flex w-full items-center py-3">
-            <Search />
-          </div>
-          <div className="px-8 py-3">
-            <Grid />
-          </div>
+          <Header />
+          <Search />
+          <Grid />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

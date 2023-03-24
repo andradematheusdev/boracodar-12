@@ -2,7 +2,7 @@ import { BsFilter, BsSearch } from "react-icons/bs";
 
 export const Search = () => {
   return (
-    <div className="flex w-full items-stretch h-12 gap-x-2 px-6">
+    <div className="flex w-full items-stretch gap-x-4 px-6 h-16 my-4">
       <button className="flex items-center justify-center text-white bg-violet-600 rounded-lg w-36 text-sm gap-x-2 hover:bg-violet-700 leading-none">
         <BsFilter size={22} />
         <span>Filtrar</span>
