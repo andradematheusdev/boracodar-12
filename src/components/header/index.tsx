@@ -1,30 +1,51 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsPencilFill } from "react-icons/bs"
 
 export const Header = () => {
   const [title, setTitle] = useState("Meu Kanban");
   const [readOnly, setReadOnly] = useState(true);
+  const titleEl = useRef<HTMLInputElement>();
+  const [titleWidth, setTitleWidth] = useState<number | undefined>();
+  
+  useEffect(() => {
+    if(titleEl.current!.value.length < 8){
+      setTitleWidth(8);
+    }else if(titleEl.current!.value.length >= 28){
+        setTitleWidth(28);
+    }else{
+      setTitleWidth(titleEl.current!.value.length);
+    }
+  }, [title])
 
   function handleEdit(){
-    setReadOnly(!readOnly);
+      setReadOnly(!readOnly);    
   }
 
   function handleTitleChange(text: string){
-    setTitle(text)
-  }
+    setTitle(text);
+  }  
 
   return (
     <header className="flex w-full justify-between items-center px-6 py-3">
-      <div className="flex flex-1 gap-x-2 items-center">
+      <div className="flex flex-1 items-center">
         <input
           type={"text"}
-          className={clsx({"underline": !readOnly},"flex w-auto text-4xl font-bold text-neutral-700 bg-transparent focus:outline-none")}
+          className={
+            clsx({
+              "underline": !readOnly},
+              `flex bg-transparent text-4xl font-bold text-neutral-700 focus:outline-none p-0`,
+            )}
           value={title}
-          onChange={(e)=>handleTitleChange(e.target.value) }
+          onChange={(e) => handleTitleChange(e.target.value)}
           readOnly={readOnly}
+          style={{width: `${titleWidth}ch`}}
+          placeholder={"Sem nome"}
+          ref={titleEl}
+          maxLength={32}
         />
-        <a href="#">
+        {/* {title.length} */}
+        <a href="#" className="">
           <BsPencilFill size={24} className="text-neutral-400" onClick={handleEdit} />
         </a>
       </div>
