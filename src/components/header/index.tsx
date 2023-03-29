@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
-import { BsPencilFill } from "react-icons/bs"
+import { BsPencilFill, BsSave } from "react-icons/bs"
 
 export const Header = () => {
   const [title, setTitle] = useState("Meu Kanban");
   const [readOnly, setReadOnly] = useState(true);
-  const titleEl = useRef<HTMLInputElement>();
+  const titleEl = useRef<HTMLInputElement>(null);
   const [titleWidth, setTitleWidth] = useState<number | undefined>();
   
   useEffect(() => {
@@ -33,7 +33,7 @@ export const Header = () => {
           type={"text"}
           className={
             clsx({
-              "underline": !readOnly},
+              "border-b": !readOnly},
               `flex bg-transparent text-4xl font-bold text-neutral-700 focus:outline-none p-0`,
             )}
           value={title}
@@ -46,7 +46,11 @@ export const Header = () => {
         />
         {/* {title.length} */}
         <a href="#" className="">
-          <BsPencilFill size={24} className="text-neutral-400" onClick={handleEdit} />
+          {
+            readOnly
+            ? <BsPencilFill size={24} className="text-neutral-400" onClick={handleEdit} />
+            : <BsSave size={24} className="text-neutral-400" onClick={handleEdit} />
+          }
         </a>
       </div>
       <div>
