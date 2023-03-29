@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { BsPencilFill, BsSave } from "react-icons/bs"
+import { Avatar } from "../avatar";
+import Tooltip from "../radix/tooltip";
 
 export const Header = () => {
   const [title, setTitle] = useState("Meu Kanban");
@@ -53,9 +55,7 @@ export const Header = () => {
           }
         </a>
       </div>
-      <div>
-        <img src="https://github.com/andradematheusdev.png" className="rounded-full w-16 h-16"/>
-      </div>
+      <Avatar picture="https://github.com/andradematheusdev.png" username="Matheus Andrade" />
     </header>
   )
 }
