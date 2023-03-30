@@ -52,6 +52,11 @@ export const Header = () => {
           maxLength={32}
           onBlur={handleBlur}
           onClick={handleEdit}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleBlur();
+            }
+          }}
         />
         <a href="#" className="">
           {readOnly ? (
