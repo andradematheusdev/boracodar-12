@@ -1,10 +1,10 @@
 import { BsClipboard, BsFileEarmarkText, BsGear, BsPeople } from "react-icons/bs";
 export const Navigation = () => {
   return (
-    <ul className="nav-links text-white">
+    <ul className="flex w-full flex-col items-center justify-center lg:block nav-links text-white">
       <li>
         <a href="#">
-          <BsClipboard /> <span>Boards</span>
+          <BsClipboard/> <span>Boards</span>
         </a>
       </li>
       <li>

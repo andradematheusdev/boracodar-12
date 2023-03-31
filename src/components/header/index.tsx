@@ -33,15 +33,15 @@ export const Header = () => {
   }
 
   return (
-    <header className="flex w-full justify-between items-center px-6 py-3">
-      <div className="flex flex-1 items-center">
+    <header className="flex w-full flex-wrap-reverse justify-between items-center px-6 py-3">
+      <div className="flex flex-1 items-center mt-8">
         <input
           type={"text"}
           className={clsx(
             {
               "border-b": !readOnly,
             },
-            `flex bg-transparent text-4xl font-bold text-neutral-700 focus:outline-none p-0`,
+            `flex bg-transparent text-4xl font-bold text-neutral-700 focus:outline-none p-0 whitespace-normal`,
           )}
           value={title}
           onChange={(e) => handleTitleChange(e.target.value)}
