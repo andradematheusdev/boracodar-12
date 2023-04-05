@@ -1,4 +1,4 @@
-import { Grid, Header, Navigation, Search } from "./components";
+import { Grid, Header, MobileHeader, Navigation, Search } from "./components";
 import Logo from "./components/Logo";
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
         </nav>
       </div>
       <div className="flex flex-1 min-w-[300px]">
-        <div className="flex flex-col w-full py-12 bg-slate-50 md:rounded-tl-[32px] md:px-8 overflow-y-auto">
+        <div className="flex flex-col w-full sm:py-12 bg-slate-50 md:rounded-tl-[32px] md:px-8 overflow-y-auto">
+          <MobileHeader />
           <Header />
           <Search />
           <Grid />

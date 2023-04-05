@@ -1,11 +1,14 @@
-import React from "react";
+interface ILogoProps{
+  width?: number;
+  height?: number;
+}
 
-const Logo = () => {
+const Logo = ({width = 50, height = 56}: ILogoProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="56"
+      width={width}
+      height={height}
       fill="none"
       viewBox="0 0 50 56"
     >
