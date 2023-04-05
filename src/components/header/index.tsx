@@ -34,7 +34,7 @@ export const Header = () => {
 
   return (
     <header className="flex w-full flex-wrap-reverse justify-between items-center px-6 py-3">
-      <div className="flex flex-1 items-center mt-8">
+      <div className="hidden sm:flex flex-1 items-center mt-8">
         <input
           type={"text"}
           className={clsx(
@@ -49,7 +49,7 @@ export const Header = () => {
           style={{ width: `${titleWidth}ch` }}
           placeholder={"Sem nome"}
           ref={titleEl}
-          maxLength={32}
+          maxLength={20}
           onBlur={handleBlur}
           onClick={handleEdit}
           onKeyDown={(e) => {
