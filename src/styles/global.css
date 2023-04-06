@@ -18,5 +18,5 @@
 }
 
 .nav-links a > span{
-  @apply ml-4 hidden lg:inline;
+  @apply ml-4 inline sm:hidden lg:inline;
 }

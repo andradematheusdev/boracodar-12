@@ -9,7 +9,7 @@ function App() {
           <Logo />
         </div>
         <nav>
-          <Navigation />
+          <Navigation center/>
         </nav>
       </div>
       <div className="flex flex-1 min-w-[300px]">

@@ -1,7 +1,13 @@
+import clsx from "clsx";
 import { BsClipboard, BsFileEarmarkText, BsGear, BsPeople } from "react-icons/bs";
-export const Navigation = () => {
+
+interface INavigationProps{
+  center?: boolean;
+}
+
+export const Navigation = ({center = false}: INavigationProps) => {
   return (
-    <ul className="flex w-full flex-col items-center justify-center lg:block nav-links text-white">
+    <ul className={clsx("flex w-full flex-col justify-center lg:block nav-links text-white", {"items-center": center})}>
       <li>
         <a href="#">
           <BsClipboard/> <span>Boards</span>
