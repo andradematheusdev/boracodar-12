@@ -3,8 +3,8 @@ import { Card } from "../card";
 
 export const Grid = () => {
   return (
-    <div className="flex flex-wrap w-full h-full max-h-screen text-neutral-700 py-16 px-4 md:px-8 gap-x-14 md:overflow-y-auto">
-      <div className="flex-1 min-w-[300px] mb-4 md:mb-0">
+    <div className="grid grid-cols-1 md:grid-cols-3 w-full h-full max-h-screen text-neutral-700 py-16 px-4 md:px-8 md: gap-x-2 lg:gap-x-14 md:overflow-y-auto">
+      <div className="mb-4 md:mb-0">
         <span className="block text-xl font-bold mb-6">A Fazer</span>
         <div className="flex flex-col gap-y-8">
           {cards.map((value) => {
@@ -14,7 +14,7 @@ export const Grid = () => {
           })}
         </div>
       </div>
-      <div className="flex-1 min-w-[300px] mb-4 md:mb-0">
+      <div className="mb-4 md:mb-0">
         <span className="block text-xl font-bold mb-6">Fazendo</span>
         <div className="flex flex-col  gap-y-8">
           {cards.map((value) => {
@@ -24,7 +24,7 @@ export const Grid = () => {
           })}
         </div>
       </div>
-      <div className="flex-1 min-w-[300px]">
+      <div className="">
         <span className="block text-xl font-bold mb-6">Feito</span>
         <div className="flex flex-col gap-y-8">
           {cards.map((value) => {
